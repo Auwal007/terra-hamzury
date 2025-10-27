@@ -157,7 +157,7 @@ export default function Home() {
         <h2>About Us</h2>
         <p>Terra Climate & Technology Initiative, an NGO, restores ecosystems, empowers communities, and champions the voices of those affected by climate change to global authorities.</p>
         <div className="about-quote">
-          <p>"To care for land, we must care for water first."</p>
+          <p>&quot;To care for land, we must care for water first.&quot;</p>
         </div>
         <h2>Who We Are</h2>
         <div className="who-we-are-grid">
