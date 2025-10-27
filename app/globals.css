@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #D4E4D4; /* Soft Moss */
+    color: #2C4A6B; /* Slate Blue */
+}
+
+/* Navigation */
+nav {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1A3C34; /* Forest Green */
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.logo::before {
+    content: '🌿';
+    margin-right: 0.5rem;
+}
+
+.nav-links a {
+    color: #2C4A6B;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #34C759; /* Lime Green */
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #1A3C34;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: url('/hero-background.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, #1A3C34, transparent); /* Forest Green fade */
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons a {
+    background: #1A3C34; /* Forest Green */
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    border-radius: 30px; /* More rounded for organic feel */
+    transition: background 0.3s, transform 0.2s;
+    border: 1px solid #34C759; /* Lime Green */
+}
+
+.cta-buttons a:nth-child(2) {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+}
+
+.cta-buttons a:hover {
+    background: #34C759;
+    transform: scale(1.05);
+}
+
+/* Pillars Section */
+.pillars {
+    padding: 4rem 2rem;
+    background: #D4E4D4; /* Soft Moss */
+    text-align: center;
+}
+
+.pillars h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #1A3C34;
+}
+
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pillar-card {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 20px; /* Softer curves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, border 0.3s;
+    border: 1px solid #8B5A2B; /* Clay Brown */
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #34C759;
+}
+
+.pillar-card i {
+    font-size: 2rem;
+    color: #1A3C34;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Impact Counters */
+.impact {
+    padding: 4rem 2rem;
+    background: #8B5A2B; /* Clay Brown */
+    text-align: center;
+}
+
+.impact h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.impact-card {
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.impact-card h3 {
+    font-size: 2rem;
+    color: #34C759;
+}
+
+.impact-card p {
+    font-size: 1rem;
+    color: #2C4A6B;
+}
+
+/* Milestones Section */
+.milestones {
+    padding: 4rem 2rem;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.milestones h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #1A3C34;
+}
+
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.milestone-card {
+    background: #D4E4D4;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.milestone-card:hover {
+    transform: translateY(-5px);
+}
+
+.milestone-card h3 {
+    font-size: 1.2rem;
+    color: #2C4A6B;
+    margin-bottom: 0.5rem;
+}
+
+/* Voice for the People Section */
+.voice {
+    padding: 4rem 2rem;
+    background: #D4E4D4;
+    text-align: center;
+}
+
+.voice h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #1A3C34;
+}
+
+.voice p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #2C4A6B;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.voice a {
+    background: #1A3C34;
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.voice a:hover {
+    background: #34C759;
+    transform: scale(1.05);
+}
+
+/* Complaints Form */
+.complaints-form {
+    padding: 4rem 2rem;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.complaints-form h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #1A3C34;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #D4E4D4;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input, .form-container select, .form-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #1A3C34;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #FFFFFF;
+}
+
+.form-container input:focus, .form-container select:focus, .form-container textarea:focus {
+    border-color: #34C759;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 199, 89, 0.5);
+}
+
+.form-container button {
+    background: #1A3C34;
+    color: #FFFFFF;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-container button:hover {
+    background: #34C759;
+}
+
+/* Apply Form */
+.apply-form {
+    padding: 4rem 2rem;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.apply-form h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #1A3C34;
+}
+
+/* About Page */
+.about {
+    padding: 4rem 2rem;
+    background: #D4E4D4;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #1A3C34;
+}
+
+.about-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #34C759;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-left: 4px solid #1A3C34;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.who-we-are-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.who-we-are-card {
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.who-we-are-card:hover {
+    transform: translateY(-5px);
+}
+
+.who-we-are-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #1A3C34;
+    color: #FFFFFF;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: #D4E4D4;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: #34C759;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #FFFFFF;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
